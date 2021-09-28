@@ -4,6 +4,7 @@
   <!-- ~~~~~~~~~~~~ Head ~~~~~~~~~~~~ -->
   <head>
     <title>Substitution helper</title>
+    <script type="text/javascript" src="decent-functions.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
   </head>
@@ -15,18 +16,74 @@
       <!-- ============ Left ============ -->
       <div class="grid-container">
         <!-- ============ Tools ============ -->
-        <div class="grid-item default-shape">
-
+        <div class="grid-item default-shape grid-container" id="tool-container">
+          <!-- ============ Input ============ -->
+          <!--<textarea rows="8" cols="80" id="input">
+            Hello world
+          </textarea>-->
+          <div class="textarea" id="input" contenteditable>
+            Hello there ye old chum. mis mistaken missing
+          </div>
+          <!-- ============ Input Buttons ============ -->
+        <div class="grid-container default-button-container">
+            <button onclick="search('mis', 'output')" name="button">Decrypt</button>
+          </div>
         </div>
       </div>
       <!-- ============ Right ============ -->
       <div class="grid-container" id="right">
-        <!-- ============ Text ============ -->
-        <div class="grid-item default-shape">
+        <!-- ============ Output ============ -->
+        <div class="grid-item default-shape grid-container" id="output-container">
+          <!--<textarea rows="8" cols="80" id="output">
+But I must explain to you how all this mistaken idea of denouncing pleasure and
+praising pain was born and I will give you a complete account of the system,
+and expound the actual teachings of the great explorer of the truth, the
+master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+itself, because it is pleasure, but because those who do not know how to pursue
+pleasure rationally encounter consequences that are extremely painful. Nor
+again is there anyone who loves or pursues or desires to obtain pain of itself,
+because it is pain, but because occasionally circumstances occur in which toil
+and pain can procure him some great pleasure. To take a trivial example, which
+of us ever undertakes laborious physical exercise, except to obtain some
+advantage from it? But who has any right to find fault with a man who chooses
+to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
+that produces no resultant pleasure?
 
+But I must explain to you how all this mistaken idea of denouncing pleasure and
+praising pain was born and I will give you a complete account of the system,
+and expound the actual teachings of the great explorer of the truth, the
+master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+itself, because it is pleasure, but because those who do not know how to pursue
+pleasure rationally encounter consequences that are extremely painful. Nor
+again is there anyone who loves or pursues or desires to obtain pain of itself,
+because it is pain, but because occasionally circumstances occur in which toil
+and pain can procure him some great pleasure. To take a trivial example, which
+of us ever undertakes laborious physical exercise, except to obtain some
+advantage from it? But who has any right to find fault with a man who chooses
+to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
+that produces no resultant pleasure?
+
+But I must explain to you how all this mistaken idea of denouncing pleasure and
+praising pain was born and I will give you a complete account of the system,
+and expound the actual teachings of the great explorer of the truth, the
+master-builder of human happiness. No one rejects, dislikes, or avoids pleasure
+itself, because it is pleasure, but because those who do not know how to pursue
+pleasure rationally encounter consequences that are extremely painful. Nor
+again is there anyone who loves or pursues or desires to obtain pain of itself,
+because it is pain, but because occasionally circumstances occur in which toil
+and pain can procure him some great pleasure. To take a trivial example, which
+of us ever undertakes laborious physical exercise, except to obtain some
+advantage from it? But who has any right to find fault with a man who chooses
+to enjoy a pleasure that has no annoying consequences, or one who avoids a pain
+that produces no resultant pleasure?
+</textarea>-->
+
+        <div class="textarea" id="output" contenteditable>
+          Hello there ye old chum. mis mistaken missing
+        </div>
         </div>
         <!-- ============ Buttons ============ -->
-        <div class="grid-item default-shape grid-container" id="button-container">
+        <div class="default-shape grid-container default-button-container" id="output-options">
           <input type="search" id="search" placeholder="Search for something!">
           <button name="button">Text Options</button>
         </div>

@@ -3,45 +3,68 @@
 
 body {
   margin: 0px;
-  background-color: #222831;
+  background-color: #313131;
+  /*background-color: #222831;*/
 }
 
 button {
   border-radius: .5vw;
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   border: none;
+  background-color: #525252;
+  color: #EEEEEE;
+}
+
+input, .textarea {
+  border-radius: .5vw;
+  text-align: left;
+  resize: none;
+  font-size: 1vw;
+  border: none;
+  background-color: #525252;
+  color: #EEEEEE;
+}
+
+.textarea:focus, input:focus{
+    outline: none;
 }
 
 input {
-  border-radius: .5vw;
-  text-align: left;
+
   padding-left: 1vw;
-  resize: none;
   overflow: hidden;
-  font-size: 1.2vw;
   font-style: italic;
-  border: none;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+.textarea {
+  padding: 1vw;
+  overflow: auto;
+  font-style: normal;
 }
 /* ~~~~~~~~~~~~~~~~~ Classes ~~~~~~~~~~~~~~~~ */
 
 /* ================ Grid ================ */
 .grid-container {
   display: grid;
-  grid-gap: .75vw;
+  grid-gap: .25vw;
 }
 
 .grid-item {
-  background-color: #393E46;
+  background-color: #414141;
+  /*background-color: #393E46;*/
 }
 
 /* ================ Default ================ */
 .default-shape {
   border-radius: .75vw;
+}
+
+.default-button-container {
+  grid-column-gap: .25vw;
+  grid-template-columns: repeat(4, 10vw);
+
+  box-sizing: border-box;
 }
 
 /* ================ Scrollbar ================ */
@@ -64,19 +87,30 @@ textarea:focus, input:focus{
   height: 100vh;
   width: 100vw;
   padding: .75vw;
+  grid-gap: .75vw;
 
   grid-template-columns: 50% auto;
   box-sizing: border-box;
 }
 
 #main #right {
-  grid-template-rows: auto 3.5vw;
+  grid-gap: .75vw;
+  grid-template-rows: auto 3vw;
 }
 
-#main #button-container {
-  grid-column-gap: .25vw;
+/*#main #button-container {
   padding: .25vw;
-  grid-template-columns: auto 10vw;
+}*/
 
+#main #output-container, #main #tool-container {
+  padding: .25vw;
   box-sizing: border-box;
+}
+
+#main #tool-container {
+  grid-template-rows: 10vw 2.7vw;
+}
+
+#main #output-options {
+    grid-template-columns: auto 10vw;
 }
